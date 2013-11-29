@@ -1,0 +1,101 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity" 
+    android:keepScreenOn="true" 
+    android:id="@+id/entire_view" >
+
+    <ImageView
+	    android:id="@+id/mapimage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:scaleType="fitXY" />
+    
+    <TextView
+        android:id="@+id/headertext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="177dp"
+        android:text="Looks like there is no map saved." />
+
+    <Button
+        android:id="@+id/filePicker"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="Pick a map here!" />
+
+    <TextView
+        android:id="@+id/subtext"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@+id/filePicker"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="52dp"
+        android:text="No thanks, continue with a blank white grid." />
+
+    <com.indoorlocator.VerticalSeekBar
+        android:id="@+id/seekBar1"
+        android:layout_width="wrap_content"
+        android:layout_height="500px"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp" 
+        android:layout_marginBottom="40dp" />
+
+    <EditText
+        android:id="@+id/scaleField"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="13dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="10dp" 
+        android:ems="2"
+        android:inputType="numberSigned" >
+    </EditText>
+
+    <Button
+        android:id="@+id/scaleButton"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="35dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="170dp" 
+        android:layout_marginBottom="12dp"
+        android:text="Save" />
+
+    <TextView
+        android:id="@+id/scaleText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="80dp" 
+        android:layout_marginBottom="16dp"
+        android:text="meters (scale)" />
+
+    <ImageView
+        android:id="@+id/point"
+        android:layout_width="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:src="@drawable/point" />
+
+    <Button
+        android:id="@+id/startNavigation"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="Save and Start" />
+    
+</RelativeLayout>
